@@ -14,7 +14,7 @@ namespace UnitTests
             List<Polje> polja = new List<Polje>
             {
                 new Polje(0, 0),
-                new Polje(0, 1),
+                new Polje(0, 1), 
                 new Polje(0, 2),
                 new Polje(0, 3),
                 new Polje(0, 4)
