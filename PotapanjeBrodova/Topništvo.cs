@@ -5,18 +5,46 @@ using System.Text;
 
 namespace PotapanjeBrodova
 {
+    public enum TaktikaGađanja
+    {
+        Napipavanje,
+        Okruživanje,
+        SustavnoUništavanje
+    }
     public class Topništvo
     {
-        public RezultatGađanja UputiPucanj(Flota flota)
+        public Topništvo()
+        {
+            PromjeniTaktikuUNapipavanju();
+        }
+        public Polje UputiPucanj(Flota flota)
         {
 
             throw new NotImplementedException();
         }
 
-        public void ObradiRezultatGađanja(RezultatGađanja rezultat)
+        public void ObradiGađanje(RezultatGađanja rezultat)
         {
 
         }
 
+        private void PromjeniTaktikuUNapipavanju()
+        {
+            TrenutnaTaktika = TaktikaGađanja.Napipavanje;
+        }
+        private void PromjeniTaktikuUOkruživanje()
+        {
+            TrenutnaTaktika = TaktikaGađanja.Okruživanje;
+        }
+
+        private void PromjeniTaktikuUSustavnoUništavanje()
+        {
+            TrenutnaTaktika = TaktikaGađanja.SustavnoUništavanje;
+        }
+        public TaktikaGađanja TrenutnaTaktika
+        {
+            get;
+            private set;
+        }
     }
 }
