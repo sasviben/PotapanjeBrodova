@@ -30,8 +30,9 @@ namespace UnitTests
             Assert.IsTrue(f.Brodovi.Contains(b2));
             Assert.IsTrue(f.Brodovi.Contains(b3));
         }
+
         [TestMethod]
-        public void Flota_GađajVraćaPromašajKojeNijeNitiUJednomBrodu()
+        public void Flota_GađajVraćaPromašajZaPoljeKojeNijeUNitiJednomBrodu()
         {
             Mreža m = new Mreža(10, 10);
             Flota f = new Flota();
@@ -45,7 +46,6 @@ namespace UnitTests
             f.DodajBrod(b2);
 
             Assert.AreEqual(RezultatGađanja.Promašaj, f.Gađaj(new Polje(9, 9)));
-
         }
 
         [TestMethod]
@@ -64,8 +64,8 @@ namespace UnitTests
 
             Assert.AreEqual(RezultatGađanja.Pogodak, f.Gađaj(new Polje(0, 1)));
             Assert.AreEqual(RezultatGađanja.Pogodak, f.Gađaj(new Polje(1, 3)));
-
         }
+
         [TestMethod]
         public void Flota_GađajVraćaPotonućeZaZadnjePogođenoPoljePrvogBroda()
         {
@@ -84,7 +84,6 @@ namespace UnitTests
             Assert.AreEqual(RezultatGađanja.Pogodak, f.Gađaj(new Polje(0, 2)));
             Assert.AreEqual(RezultatGađanja.Promašaj, f.Gađaj(new Polje(0, 3)));
             Assert.AreEqual(RezultatGađanja.Potonuće, f.Gađaj(new Polje(0, 0)));
-
         }
 
         [TestMethod]
@@ -107,8 +106,6 @@ namespace UnitTests
 
             Assert.AreEqual(RezultatGađanja.Pogodak, f.Gađaj(new Polje(1, 3)));
             Assert.AreEqual(RezultatGađanja.Potonuće, f.Gađaj(new Polje(2, 3)));
-
         }
-
     }
 }

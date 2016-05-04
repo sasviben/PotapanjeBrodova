@@ -11,15 +11,16 @@ namespace PotapanjeBrodova
         Okruživanje,
         SustavnoUništavanje
     }
+
     public class Topništvo
     {
         public Topništvo()
         {
-            PromjeniTaktikuUNapipavanju();
+            PromijeniTaktikuUNapipavanje();
         }
-        public Polje UputiPucanj(Flota flota)
-        {
 
+        public Polje UputiPucanj()
+        {
             throw new NotImplementedException();
         }
 
@@ -28,23 +29,24 @@ namespace PotapanjeBrodova
 
         }
 
-        private void PromjeniTaktikuUNapipavanju()
+        private void PromijeniTaktikuUNapipavanje()
         {
             TrenutnaTaktika = TaktikaGađanja.Napipavanje;
         }
-        private void PromjeniTaktikuUOkruživanje()
+
+        private void PromijeniTaktikuUOkruživanje()
         {
             TrenutnaTaktika = TaktikaGađanja.Okruživanje;
         }
 
-        private void PromjeniTaktikuUSustavnoUništavanje()
+        private void PromijeniTaktikuUSustavnoUništavanje()
         {
             TrenutnaTaktika = TaktikaGađanja.SustavnoUništavanje;
         }
+
         public TaktikaGađanja TrenutnaTaktika
         {
-            get;
-            private set;
+            get; private set;
         }
     }
 }

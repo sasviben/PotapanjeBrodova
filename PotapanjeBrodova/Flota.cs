@@ -21,7 +21,7 @@ namespace PotapanjeBrodova
 
         public RezultatGađanja Gađaj(Polje polje)
         {
-            foreach (Brod b in Brodovi)
+            foreach (Brod b in brodovi)
             {
                 var rezultat = b.Gađaj(polje);
                 if (rezultat != RezultatGađanja.Promašaj)
