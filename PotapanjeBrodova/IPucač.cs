@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PotapanjeBrodova
 {
-   public interface IPucač
+    public interface IPucač
     {
         Polje UputiPucanj();
     }
