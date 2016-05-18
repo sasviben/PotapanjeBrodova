@@ -7,9 +7,6 @@ using PotapanjeBrodova;
 
 namespace UnitTests
 {
-    /// <summary>
-    /// Summary description for TestMreže
-    /// </summary>
     [TestClass]
     public class TestMreže
     {
